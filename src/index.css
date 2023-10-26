@@ -162,6 +162,7 @@ nav {
   align-items: center;
   display: flex;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 #home h1 {
@@ -562,5 +563,6 @@ footer {
   }
   #disco {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
