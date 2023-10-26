@@ -86,7 +86,8 @@ img {
   max-width: 100%;
 }
 .bg_home{
-  background: url("assets/bg_home.jpg");
+  background: url("assets/bg_home.jpg") no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -95,7 +96,8 @@ img {
 }
 @media(max-width:1024px) {
   .bg_home{
-    background: url("assets/bg_home_mobile.jpg");
+    background: url("assets/bg_home_mobile.jpg") no-repeat;
+    background-size: cover;
   }
 }
 nav {
@@ -422,6 +424,7 @@ footer {
   color: #fff;
   margin-top: auto; 
   padding: 30px 0;
+  z-index: 9;
 }
 
 .footer_inner {
