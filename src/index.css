@@ -161,7 +161,9 @@ header{
 }
 
 /* Pages */
-
+#bio, #disco, #contact, #gallery {
+  background: var(--lightBrown);
+}
 #bio {
   align-items: center;
   display: flex;
