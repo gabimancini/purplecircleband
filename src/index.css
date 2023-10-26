@@ -306,7 +306,9 @@ nav {
   margin-top: 45px;
   padding: 10px 30px;
 }
-
+.success-message{
+  grid-column: span 2;
+}
 @media(max-width:1024px) {
   .contact_form button {
     justify-self: center;
@@ -401,12 +403,14 @@ nav {
 footer {
   background-color: #000;
   color: #fff;
-  margin-top: auto;
+  margin-top: auto; 
+  padding: 30px 0;
 }
 
 .footer_inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .newsletter {
@@ -522,9 +526,13 @@ footer {
   }
 
   .powered {
-    order: 1;
+    order: 1; 
+  
   }
-
+.copyright{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
   .container_header {
     padding: 32px 16px;
   }
@@ -545,5 +553,11 @@ footer {
   .container_gallery {
     padding-bottom: 50px;
     padding-top: 50px;
+  }
+  footer {
+ padding: 32px 16px;
+  }
+  .container_footer{
+    padding: 32px 16px;
   }
 }

@@ -5,7 +5,7 @@ export default function Gallery() {
         <>
             <PageTitle title="Gallery" />
             <section id="gallery">
-                <div className="container container_center">
+                <div className="container container_center container_gallery">
                     <div className="gallery">
                         {galleryData.map((image) => {
                             return (

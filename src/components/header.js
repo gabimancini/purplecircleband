@@ -20,9 +20,9 @@ export default function Header() {
     }
     return (
         <header onClick={toggleNavItems}>
-            <div className='container'>
-            {showNav? <span className='menu-icon' onClick={toggleNavItems}><BsXLg size={24} strokeWidth={1} /></span>
-            : <span className='menu-icon' onClick={toggleNavItems}><FaBars size={24} /></span>}
+            <div className='container_header'>
+            {showNav? <span className='menu-icon' onClick={toggleNavItems}><BsXLg size={24} strokeWidth={1} color='#630B35' /></span>
+            : <span className='menu-icon' onClick={toggleNavItems}><FaBars size={24} color='#630B35' /></span>}
               {showNav? <NavMobile className="open" />:<NavDesktop />}
             </div>
         </header>
@@ -50,10 +50,10 @@ function MenuLinks() {
     return (
         <ul className='menu_links'>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/contact'>Contact</Link> </li>
-            <li><Link to='/gallery'>Gallery</Link></li>
             <li><Link to='/bio'>Bio</Link></li>
             <li><Link to='/discography'>Discography</Link></li>
+            <li><Link to='/gallery'>Gallery</Link></li>
+            <li><Link to='/contact'>Contact</Link> </li>
         </ul>
     )
 }

@@ -8,7 +8,7 @@ export default function Bio() {
             <section id="bio">
                 <div className="container container_center" style={{marginTop:"5%",marginBottom:"5%" }}>
                     <BioParagraphs />
-                    <Link to='/contact' className="linkBtn">Contact Us</Link>
+                    <Link to='/contact' className="linkBtn" style={{padding:'15px 30px', marginTop:'60px'}}>Contact Us</Link>
                 </div>
             </section>
         </>
