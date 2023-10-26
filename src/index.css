@@ -85,7 +85,19 @@ h3 {
 img {
   max-width: 100%;
 }
-
+.bg_home{
+  background: url("assets/bg_home.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media(max-width:1024px) {
+  .bg_home{
+    background: url("assets/bg_home_mobile.jpg");
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -118,6 +130,9 @@ nav {
 }
 
 /* Header */
+header{
+  z-index: 9;
+}
 .container_header {
   padding: 40px 100px;
 }
@@ -189,6 +204,7 @@ nav {
   font-family: 'Oswald';
   font-weight: 500;
   font-size: 24px;
+  z-index: 9;
   padding: 25px 50px;
   margin-top: 100px;
 }
