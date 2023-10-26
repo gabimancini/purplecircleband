@@ -160,8 +160,7 @@ nav {
 
 #disco {
   align-items: center;
-  display: flex;
-  min-height: 65vh;
+  display: flex; 
 }
 
 #home h1 {
