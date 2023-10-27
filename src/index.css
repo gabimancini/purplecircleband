@@ -3,6 +3,7 @@
   --lightBrown: #CDC3C7;
   --gray: #9B9B9B;
   --black: #000;
+  --orange: #FA3636;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
@@ -153,12 +154,20 @@ header {
 
 .menu_links a {
   margin-right: 60px;
+  transition: all .5s;
 }
-
+.menu_links a:hover {
+  color: var(--orange);
+}
 .social_links li {
   margin-left: 30px;
 }
-
+.social_links a{
+  transition: all .5s;
+}
+.social_links a:hover {
+  color: var(--orange);
+}
 .container_gallery {
   padding-top: 74px;
   padding-bottom: 74px;
@@ -576,8 +585,8 @@ footer {
   }
 
   nav ul.social_links a {
-    color: white;
-  }
+    color: white; 
+  } 
 
   nav ul.social_links li {
     margin-left: unset;
