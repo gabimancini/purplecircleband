@@ -86,8 +86,9 @@ h3 {
 img {
   max-width: 100%;
 }
-.bg_home{
-  background: url("assets/bg_home.jpg") no-repeat;
+/*
+.bg_home {
+   background: url("assets/bg_home.jpg") no-repeat; 
   background-size: cover;
   position: absolute;
   top: 0;
@@ -96,12 +97,14 @@ img {
   height: 100%;
   z-index: -1;
 }
+
 @media(max-width:1024px) {
-  .bg_home{
+  .bg_home {
     background: url("assets/bg_home_mobile.jpg") no-repeat;
     background-size: cover;
   }
 }
+*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -134,9 +137,10 @@ nav {
 }
 
 /* Header */
-header{
+header {
   z-index: 9;
 }
+
 .container_header {
   padding: 40px 100px;
 }
@@ -161,9 +165,13 @@ header{
 }
 
 /* Pages */
-#bio, #disco, #contact, #gallery {
+#bio,
+#disco,
+#contact,
+#gallery {
   background: var(--lightBrown);
 }
+
 #bio {
   align-items: center;
   display: flex;
@@ -204,14 +212,89 @@ header{
 
 .linkBtn {
   background-color: transparent;
+  border: 6px solid var(--darkBrown);
   color: #000;
   text-transform: uppercase;
-  border: 6px solid var(--darkBrown);
   font-family: 'Oswald';
   font-weight: 500;
   font-size: 24px;
   padding: 25px 50px;
   margin-top: 100px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+}
+.linkBtn.btnHome{
+  border:none;
+}
+.linkBtn.btnHome::after,
+.linkBtn.btnHome::before {
+  border: 0;
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+  border-radius: 50%;
+}
+
+.linkBtn.btnHome::before {
+  border: 0;
+  background-color: var(--darkBrown);
+  top: -0.75rem;
+  left:-10px;
+  animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+}
+
+.linkBtn.btnHome::after {
+  background-color: var(--darkBrown);
+  bottom: -10px;
+  left: 13rem;
+  animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+}
+
+.linkBtn.btnHome:hover {
+  color: white;
+}
+
+.linkBtn.btnHome:hover::after,
+.linkBtn.btnHome:hover::before {
+  top: 0; 
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  animation: none;
+}
+
+.linkBtn.btnHome:hover::after {
+  left: 0rem;
+  background-color: #FA3636;
+}
+
+.linkBtn.btnHome:hover::before {
+  top: 0.5rem;
+  left: 0.35rem;
+  
+}
+
+@keyframes topAnimation {
+  from {
+    transform: translate(0rem, 0);
+  }
+
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+
+@keyframes bottomAnimation {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+
+  to {
+    transform: translate(-5rem, 0);
+  }
 }
 
 .bioParagraphs {
@@ -328,9 +411,11 @@ header{
   margin-top: 45px;
   padding: 10px 30px;
 }
-.success-message{
+
+.success-message {
   grid-column: span 2;
 }
+
 @media(max-width:1024px) {
   .contact_form button {
     justify-self: center;
@@ -425,7 +510,7 @@ header{
 footer {
   background-color: #000;
   color: #fff;
-  margin-top: auto; 
+  margin-top: auto;
   padding: 30px 0;
   z-index: 9;
 }
@@ -549,13 +634,15 @@ footer {
   }
 
   .powered {
-    order: 1; 
-  
+    order: 1;
+
   }
-.copyright{
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
+
+  .copyright {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
   .container_header {
     padding: 32px 16px;
   }
@@ -577,12 +664,15 @@ footer {
     padding-bottom: 50px;
     padding-top: 50px;
   }
+
   footer {
- padding: 32px 16px;
-  }
-  .container_footer{
     padding: 32px 16px;
   }
+
+  .container_footer {
+    padding: 32px 16px;
+  }
+
   #disco {
     padding-top: 0;
     padding-bottom: 0;
