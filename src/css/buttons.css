@@ -1,0 +1,110 @@
+.linkBtn {
+    background-color: transparent;
+    border: 6px solid var(--darkBrown);
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 24px;
+    padding: 25px 50px;
+    margin-top: 100px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+  }
+  .linkBtn.btnHome{
+    border:none;
+  }
+  .linkBtn:hover{ 
+      box-shadow: inset 0 0 0 50px var(--darkBrown);
+    color: white;
+  }
+  .linkBtn.btnHome::after,
+  .linkBtn.btnHome::before {
+    border: 0;
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 20%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+    border-radius: 50%;
+  }
+  
+  .linkBtn.btnHome::before {
+    border: 0;
+    background-color: var(--darkBrown);
+    top: -0.75rem;
+    left:-10px;
+    animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+  }
+  
+  .linkBtn.btnHome::after {
+    background-color: var(--darkBrown);
+    bottom: -10px;
+    left: 13rem;
+    animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+  }
+  
+  .linkBtn.btnHome:hover {
+    color: white;
+  }
+  .linkBtn.btnHome:hover::after,
+.linkBtn.btnHome:hover::before {
+  top: 0; 
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  animation: none;
+}
+
+.linkBtn.btnHome:hover::after {
+  left: 0rem;
+  background-color: #FA3636;
+}
+
+.linkBtn.btnHome:hover::before {
+  top: 0.5rem;
+  left: 0.35rem;
+  
+}
+
+@keyframes topAnimation {
+  from {
+    transform: translate(0rem, 0);
+  }
+
+  to {
+    transform: translate(0rem, 3.5rem);
+  }
+}
+
+@keyframes bottomAnimation {
+  from {
+    transform: translate(-11.5rem, 0);
+  }
+
+  to {
+    transform: translate(-5rem, 0);
+  }
+}
+@media(max-width:1024px) {
+    #home {
+        min-width: none;
+      }
+    
+      #home h1 {
+        font-size: 68px;
+        width: 320px;
+      }
+    
+      #home h1 .cLetter {
+        font-size: 94px;
+        top: -37%
+      }
+    
+      .linkBtn {
+        font-size: 20px;
+        padding: 15px 30px;
+      }
+}
+  
