@@ -16,3 +16,18 @@
     left: 56%;
     top: -35%;
   }
+  @media(max-width:1024px) {
+    #home {
+        min-width: none;
+      }
+    
+      #home h1 {
+        font-size: 68px;
+        width: 320px;
+      }
+    
+      #home h1 .cLetter {
+        font-size: 94px;
+        top: -37%
+      }
+    }
